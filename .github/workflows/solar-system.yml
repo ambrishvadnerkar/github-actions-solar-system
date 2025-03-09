@@ -60,9 +60,9 @@ jobs:
             registry: ghcr.io
             username: '${{ github.repository_owner }}'
             password: '${{ secrets.GITHUB_TOKEN }}'
-            
+
         - uses: docker/build-push-action@v4
           with:
             context: .
-              push: true
-              tags: 'ghcr.io/${{ env.REPO_OWNER_LC }}/solar-system:${{ github.sha }}'
+            push: true
+            tags: 'ghcr.io/${{ env.REPO_OWNER_LC }}/solar-system:${{ github.sha }}'
